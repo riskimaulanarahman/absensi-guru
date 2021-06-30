@@ -31,3 +31,6 @@ Route::apiResource('/generate-qr','API\GenerateController');
 
 //absensi
 Route::apiResource('/form-absensi','API\AbsensiController');
+
+//data absensi
+Route::apiResource('/data-absensi','API\ReportController');

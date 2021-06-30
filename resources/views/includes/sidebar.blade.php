@@ -83,9 +83,9 @@
 
 				if(Auth::user()->role == 'admin') {
 					$optmenu = 'sidebar-admin.menu';
-				} elseif(Auth::user()->role == 'supervisor') {
+				} elseif(Auth::user()->role == 'kepsek') {
 					$optmenu = 'sidebar-kepsek.menu';
-				} elseif(Auth::user()->role == 'operator') {
+				} elseif(Auth::user()->role == 'guru') {
 					$optmenu = 'sidebar-guru.menu';
 				}
 				
