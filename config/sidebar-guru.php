@@ -15,7 +15,7 @@ return [
   'menu' => [
         [
             'icon' => 'fa fa-th-large',
-            'title' => 'Dashboard',
+            'title' => 'Dashboard Guru',
             'url' => '/',
         ],[
             'icon' => 'fa fa-hdd',

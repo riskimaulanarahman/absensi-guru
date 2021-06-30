@@ -34,10 +34,9 @@ Route::group( ['as' => 'admin.','middleware' => ['auth']], function() {
     //master user
     Route::get('/master-user','masteruser\LoginUserController@show')->name('masteruser');
     //
-    Route::get('/generate-qr','API\generateController@show')->name('generateqr');
+    Route::get('/generate-qr','API\GenerateController@show')->name('generateqr');
 
-    Route::get('/bantuan', 'MainController@bantuan')->name('bantuan');
-
+    Route::get('/data-absensi','API\ReportController@show')->name('report');
 
     
 });

@@ -23,7 +23,7 @@ return [
             'icon' => 'fa fa-hdd',
             'title' => 'Data Absensi',
             'url' => '/data-absensi',
-            'route-name' => 'data-absensi.index'
+            'route-name' => 'admin.report'
         ]
         ,[
             'icon' => 'fa fa-users',
