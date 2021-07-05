@@ -1,6 +1,6 @@
 @extends('layouts.default', ['sidebarSearch' => true])
 
-@section('title', 'Page with Search Sidebar')
+@section('title', 'Dashboard Guru')
 
 @section('content')
 	<!-- begin panel -->
@@ -15,8 +15,13 @@
 			</div>
 		</div>
 		<div class="panel-body">
-			Panel Content Here
+			<div id="report-absensi" style="height: 500px;">
 		</div>
 	</div>
 	<!-- end panel -->
 @endsection
+
+@push('scripts')
+<script src="/assets/js/report-absensi.js?n=1"></script>
+
+@endpush

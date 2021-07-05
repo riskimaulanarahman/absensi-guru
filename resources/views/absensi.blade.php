@@ -4,6 +4,7 @@
 
 @section('content')
 	<!-- begin error -->
+	@if(isset($kode))
 	@if($status !== 'tutup')
 	<div class="error">
 		<div class="error-code">{!! QrCode::size(200)->generate($kode); !!}</div>
@@ -15,9 +16,25 @@
 			</div>
 			<div>
 				<a href="/form-absensi/{{$kode}}" class="btn btn-success p-l-20 p-r-20">Go to link</a>
+				<a href="/" class="btn btn-warning p-l-20 p-r-20">Kembali</a>
+
 			</div>
 		</div>
 	</div>
+	@else
+	<div class="error">
+		<div class="error-code">Tutup</div>
+		<div class="error-content">
+            <div class="error-message" id="datetime"></div>
+			<div class="error-desc mb-3 mb-sm-4 mb-md-5">
+				Absensi belum tersedia, silahkan hubungi admin. <br />
+			</div>
+			<div>
+				<a href="/" class="btn btn-warning p-l-20 p-r-20">Kembali</a>
+			</div>
+		</div>
+	</div>
+	@endif
 	@else
 	<div class="error">
 		<div class="error-code">Tutup</div>

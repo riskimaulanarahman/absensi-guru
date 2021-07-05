@@ -12,4 +12,9 @@ class Absensi extends Model
     protected $table = 'tbl_absensi';
     protected $guarded = ['id'];
 
+    public function users()
+    {
+        return $this->belongsTo('App\User','nip','nip');
+    }
+
 }

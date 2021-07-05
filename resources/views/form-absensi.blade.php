@@ -1,6 +1,6 @@
 @extends('layouts.empty', ['paceTop' => true])
 
-@section('title', '404 Error Page')
+@section('title', 'Absensi Guru')
 
 @section('content')
 	<!-- begin error -->
@@ -13,26 +13,29 @@
             <div class="d-flex justify-content-center m-b-10">
                 <div ><input type="text" name="nip" id="nip" placeholder="NIP" class="form-control" required></div>
             </div>
+
+            @if($status == 'masuk')
 			<div class="error-desc m-b-20">
                 <div class="col-md-12">
                     <div class="radio radio-css radio-inline">
-                        <input type="radio" name="kehadiran" id="kehadiran" value="wfh" checked="">
+                        <input type="radio" name="kehadiran" id="kehadiran" value="1" checked="">
                         <label for="kehadiran">WFH</label>
                     </div>
                     <div class="radio radio-css radio-inline">
-                        <input type="radio" name="kehadiran" id="kehadiran2" value="wfo">
+                        <input type="radio" name="kehadiran" id="kehadiran2" value="2">
                         <label for="kehadiran2">WFO</label>
                     </div>
                     <div class="radio radio-css radio-inline">
-                        <input type="radio" name="kehadiran" id="kehadiran3" value="izin">
+                        <input type="radio" name="kehadiran" id="kehadiran3" value="3">
                         <label for="kehadiran3">Izin</label>
                     </div>
                     <div class="radio radio-css radio-inline">
-                        <input type="radio" name="kehadiran" id="kehadiran4" value="sakit">
+                        <input type="radio" name="kehadiran" id="kehadiran4" value="4">
                         <label for="kehadiran4">Sakit</label>
                     </div>
                 </div>
 			</div>
+            @endif
 			<div>
             </div>
         </form>

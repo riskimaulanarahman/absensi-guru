@@ -1,5 +1,6 @@
 <meta charset="utf-8" />
-<title>SDIT Luqman Al Hakim | @yield('title')</title>
+{{-- <title>SDIT Luqman Al Hakim | @yield('title')</title> --}}
+<title>Absensi | @yield('title')</title>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 <meta content="" name="description" />
 <meta content="" name="author" />

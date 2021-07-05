@@ -1,6 +1,6 @@
 @extends('layouts.default', ['sidebarSearch' => true])
 
-@section('title', 'Generate QR')
+@section('title', 'Data Absensi')
 
 @section('content')
 	<!-- begin row -->

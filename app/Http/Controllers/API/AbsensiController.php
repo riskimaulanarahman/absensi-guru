@@ -20,10 +20,15 @@ class AbsensiController extends Controller
     public function index()
     {  
         $getkode = Kode::orderBy('created_at','desc')->first();
-        return view('absensi',[
-            'kode' => $getkode->kode,
-            'status' => $getkode->status
-        ]);
+
+        if(isset($getkode)) {
+            return view('absensi',[
+                'kode' => $getkode->kode,
+                'status' => $getkode->status
+            ]);
+        } else {
+            return view('absensi');
+        }
     }
 
     public function formabsensi($kode)
@@ -46,8 +51,7 @@ class AbsensiController extends Controller
     public function store(Request $request)
     {
         try {
-
-            $checknip = User::where('nip',$request->nip)->count();
+            $checknip = User::where('nip',$request->nip)->where('role','guru')->count();
 
             if($checknip > 0) {
 
@@ -55,9 +59,9 @@ class AbsensiController extends Controller
                     $checkabsensi = Absensi::where('nip',$request->nip)->whereNotNull('jam_masuk')->whereDate('created_at',Carbon::today())->count();
                 } else if($request->status == 'pulang') {
                     $checkabsensi = Absensi::where('nip',$request->nip)->whereNotNull('jam_keluar')->whereDate('created_at',Carbon::today())->count();
-                    if($checkabsensi < 1) {
-                        return response()->json(["status" => "error", "message" => "Data Kosong, Anda Tidak Bisa Melakukan Absensi"]);
-                    }
+                    // if($checkabsensi < 1) {
+                    //     return response()->json(["status" => "error", "message" => "Data Kosong, Anda Tidak Bisa Melakukan Absensi"]);
+                    // }
                 }
 
                 if($checkabsensi < 1) {
@@ -82,7 +86,7 @@ class AbsensiController extends Controller
                     return response()->json(["status" => "error", "message" => "Anda Sudah Absen ".$request->status." Hari ini"]);
                 }
             } else {
-                return response()->json(["status" => "error", "message" => "NIP Tidak Ditemukan"]);
+                return response()->json(["status" => "error", "message" => "NIP Tidak Ditemukan Atau Anda Bukan Guru"]);
             }
 
         } catch (\Exception $e){

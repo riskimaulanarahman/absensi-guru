@@ -26,12 +26,13 @@
             // } else if(method !== "GET" && result.status == "error") {
             //     logError(username, method, url, text);
             // }
-            // console.log(result.status);
+            console.log(result.data);
             if(result.status !== "show") {
 
                 DevExpress.ui.notify(text, type, time);
             }
         }).fail(function(xhr) {
+            console.log('failed');
             d.reject(xhr.responseJSON ? xhr.responseJSON.Message : xhr.statusText);
         });
     

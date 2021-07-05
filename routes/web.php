@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 Route::get('/absensi', 'API\AbsensiController@index');
 Route::get('/form-absensi/{kode}', 'API\AbsensiController@formabsensi');
+Route::apiResource('/api/data-absensi','API\ReportController');
 
 Route::group( ['as' => 'admin.','middleware' => ['auth']], function() {
 
