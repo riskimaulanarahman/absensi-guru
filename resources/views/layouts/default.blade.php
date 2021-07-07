@@ -42,13 +42,15 @@
 			@yield('content')
 		</div>
 		
-		@includeWhen($footer, 'includes.footer')
+		{{-- @includeWhen($footer, 'includes.footer') --}}
 		
 		@include('includes.component.theme-panel')
 		
 		@include('includes.component.scroll-top-btn')
 		
 	</div>
+	@include('includes.footer')
+
 	
 	@include('includes.page-js')
 </body>

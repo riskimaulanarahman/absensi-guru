@@ -28,7 +28,8 @@ var row = [{dataField:"year",fixed: true,alignment: "left"},{dataField:"month",f
 $.map(field,function(val,i){
         var item = {caption: val,alignment: "center",columns: [{caption: "status",dataField: val,alignment: "center",
         customizeText: function(e) {var text = ['','WFH','WFO','I','S'];return text[e.value];}},
-        {caption: "in",alignment: "center",dataField: "jam_masuk_"+val,},{caption: "out",alignment: "center",dataField: "jam_keluar_"+val,}]};
+        {caption: "in",alignment: "center",dataField: "jam_masuk_"+val,
+    },{caption: "out",alignment: "center",dataField: "jam_keluar_"+val,}]};
         row.push(item);
 });
 

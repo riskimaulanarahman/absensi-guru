@@ -18,26 +18,26 @@ return [
             'title' => 'Dashboard',
             'url' => '/',
             'route-name' => 'admin.index'
-        ],
-        [
-            'icon' => 'fa fa-hdd',
-            'title' => 'Data Absensi',
-            'url' => '/data-absensi',
-            'route-name' => 'admin.report'
         ]
-        ,[
-            'icon' => 'fa fa-users',
-            'title' => 'Kelola User',
-            'url' => '/master-user',
-            'route-name' => 'admin.masteruser'
-        ]
+        // [
+        //     'icon' => 'fa fa-hdd',
+        //     'title' => 'Data Absensi',
+        //     'url' => '/data-absensi',
+        //     'route-name' => 'admin.report'
+        // ]
+        
         ,[
             'icon' => 'fa fa-file',
             'title' => 'Generate Absensi',
             'url' => '/generate-qr',
             'route-name' => 'admin.generateqr'
 
-        ],
+        ],[
+            'icon' => 'fa fa-users',
+            'title' => 'Kelola User',
+            'url' => '/master-user',
+            'route-name' => 'admin.masteruser'
+        ]
         // ,[
         //     'icon' => 'fa fa-hdd',
         //     'title' => 'Kelola Sistem',
