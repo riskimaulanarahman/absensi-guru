@@ -40,6 +40,7 @@ StatusType = [{id:1,statustype:"masuk"},{id:2,statustype:"pulang"},{id:3,statust
 var dataGrid = $("#report-absensi").dxDataGrid({    
     dataSource: store,
     // columnsAutoWidth: true,
+    showColumnLines: true,
     allowColumnResizing: true,
     columnHidingEnabled: false,
     showBorders: true,
