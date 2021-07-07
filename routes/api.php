@@ -17,11 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//master data surat
-Route::apiResource('/surat-masuk','masterdatasurat\suratmasuk\SuratmasukController');
-Route::apiResource('/surat-keluar','masterdatasurat\suratkeluar\SuratkeluarController');
-Route::apiResource('/surat-pelayanan','masterdatasurat\suratpelayanan\SuratpelayananController');
-Route::post('/upload-berkas/{id}/{module}','BerkasController@update')->name('uploadberkas');
 
 //master user
 Route::apiResource('/master-user','masteruser\LoginUserController');
