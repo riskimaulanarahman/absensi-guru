@@ -7,7 +7,7 @@
 	@if(isset($kode))
 	@if($status !== 'tutup')
 	<div class="error">
-		<div class="error-code">{!! QrCode::size(200)->generate($kode); !!}</div>
+		<div class="error-code">{!! QrCode::size(200)->generate('http://presensi-luqman.com/form-absensi/'.$kode); !!}</div>
 		<h4>({{$kode}})</h4>
 		<div class="error-content">
             <div class="error-message" id="datetime"></div>
